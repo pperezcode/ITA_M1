@@ -10,19 +10,27 @@ public class VariablesM1N3App {
 		
 		int[] array = {1,2,3,4,5,6,7,8,9,10};
 		
-		//Rotar l'array (sense utilitzar un array auxiliar ni llibreries; es pot utilizar una variable auxiliar)
 		
-		
+		//Pintem l'array inicial
 		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");		//El pintem del dret
+			System.out.print(array[i] + " ");		
 		}
-		
 		System.out.println("");						//Salt de línia
 		
-		for (int i = 9; i >= 0; i--) {
-			System.out.print(array[i] + " ");		//El pintem del revés
+		
+		//Rotar l'array (sense utilitzar un array auxiliar ni llibreries; es pot utilizar una variable auxiliar)
+		
+		int j = 0; 		//comptador que ens ajudarà a rotar l'array
+		for (int i = 0; i < array.length; i++) {
+			array[i] = array.length - j;
+			j++;
 		}
 	
+		
+		//Pintem l'array resultant de la rotació
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");		
+		}	
 	}
 
 }
